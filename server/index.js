@@ -8,7 +8,7 @@ const io = require('socket.io')(http);
 const port = process.env.PORT || 5000;
 
 const Message = require('./Message');
-const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 
 const { MongoClient } = require("mongodb");
 
