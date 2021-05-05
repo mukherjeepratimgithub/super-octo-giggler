@@ -1,0 +1,26 @@
+{
+  "name": "super-octo-giggler",
+  "version": "1.0.0",
+  "description": "Message app",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently --kill-others \"heroku local\" \"npm run start --prefix ./client\"",
+    "postinstall": "npm install --prefix ./server && npm install --prefix ./client && npm run build --prefix ./client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mukherjeepratimgithub/super-octo-giggler.git"
+  },
+  "keywords": [
+    "message"
+  ],
+  "author": "Pratim Mukherje",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mukherjeepratimgithub/super-octo-giggler/issues"
+  },
+  "homepage": "https://github.com/mukherjeepratimgithub/super-octo-giggler#readme",
+  "devDependencies": {
+    "concurrently": "^6.0.2"
+  }
+}

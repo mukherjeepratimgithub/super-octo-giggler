@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mukherjeepratimgithub/super-octo-giggler.git"
+  },
+  "keywords": [
+    "copy"
+  ],
+  "author": "Pratim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mukherjeepratimgithub/super-octo-giggler.git"
+  },
+  "homepage": "https://github.com/mukherjeepratimgithub/super-octo-giggler.git",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.7",
+    "socket.io": "^4.0.1"
+  }
+}
