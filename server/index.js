@@ -4,13 +4,17 @@ const http = require('http').Server(app);
 const path = require('path');
 const io = require('socket.io')(http);
 
-const uri = process.env.MONGODB_URI;
+//const uri = process.env.MONGODB_URI;
 const port = process.env.PORT || 5000;
 
 const Message = require('./Message');
 const mongoose = require('mongoose');
 
-mongoose.connect(uri, {
+const { MongoClient } = require("mongodb");
+
+const uri = "mongodb+srv://pratim_mukherjee:EtC4BPHt6Y7VFc7d@Cluster0.e857c.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+
+MongoClient.connect(uri, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
 });
