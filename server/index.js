@@ -19,6 +19,7 @@ MongoClient.connect(uri, {
   useNewUrlParser: true,
 });
 
+//routing
 app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 
 io.on('connection', (socket) => {
@@ -26,6 +27,11 @@ io.on('connection', (socket) => {
   // Get the last 10 messages from the database.
   Message.find().sort({createdAt: -1}).limit(10).exec((err, messages) => {
     if (err) return console.error(err);
+
+    console.log('a user connected');
+  socket.on('disconnect', () => {
+    console.log('user disconnected');
+  });
 
     // Send the last messages to the user.
     socket.emit('init', messages);
